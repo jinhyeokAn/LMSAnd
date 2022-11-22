@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_marginTop="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:background="@color/team_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <ImageView
+            android:id="@+id/imgv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+        <ImageView
+            android:id="@+id/imgv_edit"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_edit_24"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <ImageView
+        android:id="@+id/imgv_profileback"
+        android:alpha="0.7"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_back"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/loginImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_no_user" />
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/loginImage"
+        android:layout_alignTop="@id/loginImage"
+        android:layout_marginTop="20dp"
+        android:id="@+id/loginID"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Android Studio"/>
+    <TextView
+        android:layout_below="@id/loginID"
+        android:textSize="15dp"
+        android:layout_alignLeft="@id/loginID"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:textColor="#BDBDBD"
+        android:text="Android Studio"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+
+
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@color/white"
+            android:layout_below="@id/loginImage"
+            android:layout_alignLeft="@id/loginImage"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:padding="5dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logo"
+            android:layout_below="@id/loginImage"
+            android:layout_alignLeft="@id/loginImage"
+            />
+
+</RelativeLayout>
+
+</LinearLayout>
