@@ -21,53 +21,53 @@
 
     <LinearLayout
 
+        android:id="@+id/ln_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
         android:gravity="center"
-        android:id="@+id/ln_layout"
-        >/
+        android:orientation="horizontal"
+        android:padding="10dp">/
 
-    <ImageView
-        android:id="@+id/imgv_logo"
-        android:src="@drawable/menuimage1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"/>
+        <ImageView
+            android:id="@+id/imgv_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menuimage1" />
+
         <LinearLayout
-            android:orientation="vertical"
-
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content">
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tv_menu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:text="강의관리"
-                android:textSize="15dp"
-                android:layout_marginLeft="10dp"
                 android:textColor="#292929"
-                />
+                android:textSize="15dp" />
+
             <TextView
-                android:layout_width="match_parent"
                 android:id="@+id/tv_menu_sub"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="(내정보 확인 , 수정 ..)"
-                android:textSize="12dp"
                 android:layout_marginLeft="10dp"
+                android:text="(내정보 확인 , 수정 ..)"
                 android:textColor="#979797"
-                />
+                android:textSize="12dp" />
         </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imgv_arrow"
-        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/imgv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
 
-</LinearLayout>
+    </LinearLayout>
     <View
         android:id="@+id/view_line"
         android:layout_alignParentTop="true"
