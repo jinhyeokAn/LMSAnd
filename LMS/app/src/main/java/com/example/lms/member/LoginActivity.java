@@ -22,7 +22,6 @@ import java.util.ArrayList;
 public class LoginActivity extends AppCompatActivity {
     EditText edtid, edtpw;
     Button edtlogin;
-    LinearLayout login_lin2;
 
 
     @Override
