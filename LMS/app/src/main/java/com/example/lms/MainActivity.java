@@ -93,9 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         main_list= new ArrayList<>();
-        if(LoginVO.flag==1){
+        if(vo.getInfo_cd() == 3){
             main_list = getTeacherList();
-        }else {
+        }else if(vo.getInfo_cd() == 1)  {
             main_list = getStudentList();
         }
 
@@ -145,9 +145,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    static class LoginVO{
-        static int flag = 1;
-    }
 
 
 
