@@ -47,7 +47,7 @@ public class LectureFragment extends Fragment {
             public void onResult(String data, boolean isResult) {
                 if(isResult){
                     ArrayList<LectureVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<LectureVO>>(){}.getType());
-                    LectureAdapter adapter = new LectureAdapter(getLayoutInflater(), list);
+                    LectureAdapter adapter = new LectureAdapter(getLayoutInflater(), list, getActivity());
                     RecyclerView.LayoutManager manager = new LinearLayoutManager(
                             getContext(), RecyclerView.VERTICAL, false
                     );
