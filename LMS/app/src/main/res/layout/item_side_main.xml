@@ -68,14 +68,15 @@
 
 
     </LinearLayout>
+
     <View
         android:id="@+id/view_line"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:layout_width="match_parent"
-        android:layout_marginRight="100dp"
         android:layout_height="5dp"
-        android:background="#123"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="100dp"
+        android:background="#123" />
 
 </RelativeLayout>
 
