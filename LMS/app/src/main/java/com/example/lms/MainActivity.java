@@ -12,8 +12,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 
+import com.example.lms.lecture.LectureDetailFragment;
 import com.example.lms.lecture.LectureFragment;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.member.MemberVO;
@@ -30,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
     NavigationView nav_view;
     int currInx = -1 ;
     ArrayList<SideVO> main_list;
+    Button lec_detail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
         MemberVO vo = (MemberVO) intent.getSerializableExtra("vo");
-
 
         CommonAskTask askTask = new CommonAskTask("andLogin", this);
         askTask.addParam("id",new Gson().toJson(vo));
@@ -47,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
             public void onResult(String data, boolean isResult) {
                 Log.d("아이디", "onResult: "+ isResult);
                 Log.d("비밀번호", "onResult: "+ data);
+            }
+        });
+        lec_detail = findViewById(R.id.lec_detail);
+        lec_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureDetailFragment()).commit();
+
             }
         });
 
@@ -141,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
     }
 
 
