@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();//현재 액티비티를 닫는 처리(종료)
             }
-        }, 3000);
+        }, 1);
 
     }
 }
