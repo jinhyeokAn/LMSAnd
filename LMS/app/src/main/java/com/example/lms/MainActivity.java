@@ -17,6 +17,7 @@ import android.widget.ExpandableListView;
 
 import com.example.lms.lecture.LectureFragment;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.member.MemberVO;
 import com.example.lms.notice.NoticeFragment;
 import com.example.lms.sidemenu.SideAdapter;
 import com.example.lms.sidemenu.SideVO;
