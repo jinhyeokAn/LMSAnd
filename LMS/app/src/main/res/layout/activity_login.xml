@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
-    android:paddingTop="150dp"
+    android:paddingTop="100dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
 
                 <LinearLayout
                     android:layout_marginLeft="50dp"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="70dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
