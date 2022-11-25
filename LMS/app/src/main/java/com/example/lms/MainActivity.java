@@ -17,6 +17,7 @@ import android.widget.ExpandableListView;
 import com.example.lms.lecture.LectureFragment;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.member.MemberVO;
+import com.example.lms.score.ScoreFragment;
 import com.example.lms.sidemenu.SideAdapter;
 import com.example.lms.sidemenu.SideVO;
 import com.google.android.material.navigation.NavigationView;
@@ -29,14 +30,14 @@ public class MainActivity extends AppCompatActivity {
     ExpandableListView expd_listv;
     NavigationView nav_view;
     int currInx = -1 ;
+    MemberVO vo;
     ArrayList<SideVO> main_list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
-        MemberVO vo = (MemberVO) intent.getSerializableExtra("vo");
-
+        vo = (MemberVO) intent.getSerializableExtra("vo");
 
         CommonAskTask askTask = new CommonAskTask("andLogin", this);
         askTask.addParam("id",new Gson().toJson(vo));
@@ -135,8 +136,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 if(main_list.get(groupPosition).getList().get(childPosition).getFragment()!=null){
+                    Bundle bundle = new Bundle();
+                    bundle.putString("id",vo.getId());
+                    main_list.get(groupPosition).getList().get(childPosition).getFragment().setArguments(bundle);
+
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, main_list.get(groupPosition).getList().get(childPosition).getFragment()).commit();
                     drawer.closeDrawer(GravityCompat.START);
+
                 }
                 return true;
             }
@@ -199,6 +205,8 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<SideVO> sub_list3 = new ArrayList<>();
         sub_list3.add(new SideVO("과제 제출", new LectureFragment()));
+        sub_list3.add(new SideVO("성적 조회", new ScoreFragment()));
+
 
         main_list.add(new SideVO("성적 관리","(과제 등록 , 학생 성적 확인... )" , "#661234"  , sub_list3 ));
         main_list.get(2).setImageId(R.drawable.menuimage3);
