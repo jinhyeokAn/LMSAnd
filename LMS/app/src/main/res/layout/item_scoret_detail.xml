@@ -69,7 +69,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="교수명"
+                        android:text="학생 명"
                         android:textColor="#292929"
                         android:textSize="18dp"
                         android:textStyle="bold" />
@@ -80,11 +80,11 @@
                         android:layout_weight="1" />
 
                     <TextView
-                        android:id="@+id/detail_teacher_name"
+                        android:id="@+id/detail_student_name"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginRight="10dp"
-                        android:text="실제 교수이름"
+                        android:text="학생 이름"
                         android:textColor="#292929"
                         android:textSize="15dp" />
                 </LinearLayout>
