@@ -139,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 if(main_list.get(groupPosition).getList().get(childPosition).getFragment()!=null){
                     Bundle bundle = new Bundle();
                     bundle.putString("id",vo.getId());
+                    bundle.putString("name",vo.getName());
                     main_list.get(groupPosition).getList().get(childPosition).getFragment().setArguments(bundle);
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, main_list.get(groupPosition).getList().get(childPosition).getFragment()).commit();

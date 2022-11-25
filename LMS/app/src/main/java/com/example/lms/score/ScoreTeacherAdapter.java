@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lms.R;
@@ -79,6 +80,30 @@ public class ScoreTeacherAdapter extends RecyclerView.Adapter<ScoreTeacherAdapte
             }
         });
 
+/*
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                ArrayList<ScoreVO> filter = new ArrayList<>();                                    ;
+                for(int i = 0; i< list.size(); i++){
+
+                    if(list.get(i).getName().toLowerCase().contains(newText.toLowerCase())){
+                        filter.add(list.get(i));
+                    }
+                }
+                Log.d("score", "onQueryTextChange: filter리스트 사이즈 :      " + filter.size());
+
+                return false;
+            }
+        });
+*/
+
     }
 
     @Override
@@ -90,6 +115,7 @@ public class ScoreTeacherAdapter extends RecyclerView.Adapter<ScoreTeacherAdapte
         LinearLayout view_layout ;
         ImageView imgv_arrow ;
         TextView tv_student_title,tv_score;
+        SearchView searchView;
 
         public ViewHolder(@NonNull View v) {
             super(v);
@@ -97,7 +123,7 @@ public class ScoreTeacherAdapter extends RecyclerView.Adapter<ScoreTeacherAdapte
             view_layout = v.findViewById(R.id.view_layout);
             tv_student_title =  v.findViewById(R.id.tv_student_title);
             tv_score = v.findViewById(R.id.tv_score);
-
+            searchView = v.findViewById(R.id.search_student);
 
             imgv_arrow.setTag("0");
         }

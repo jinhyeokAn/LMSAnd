@@ -54,7 +54,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    android:text="실제 강의 이름"
+                    android:text="강의 이름"
                     android:textColor="#292929"
                     android:textSize="15dp" />
 
