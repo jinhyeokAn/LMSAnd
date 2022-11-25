@@ -1,11 +1,55 @@
 package com.example.lms.notice;
 
+import androidx.fragment.app.Fragment;
+
+import com.example.lms.sidemenu.SideVO;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class NoticeVO implements Serializable {
 	private int  readcnt, id;
 	private String title, content, writer,filename,	filepath;
 	private String writedate;
+	private Fragment fragment;
+	ArrayList<SideVO> list = new ArrayList<>();
+
+	public NoticeVO(int readcnt, int id, String title, String content, String writer, String filename, String filepath, String writedate, Fragment fragment, ArrayList<SideVO> list) {
+		this.readcnt = readcnt;
+		this.id = id;
+		this.title = title;
+		this.content = content;
+		this.writer = writer;
+		this.filename = filename;
+		this.filepath = filepath;
+		this.writedate = writedate;
+		this.fragment = fragment;
+		this.list = list;
+	}
+
+	public NoticeVO(int readcnt, int id, String title, String content, String writer, String filename, String filepath, String writedate, ArrayList<SideVO> list) {
+		this.readcnt = readcnt;
+		this.id = id;
+		this.title = title;
+		this.content = content;
+		this.writer = writer;
+		this.filename = filename;
+		this.filepath = filepath;
+		this.writedate = writedate;
+		this.list = list;
+	}
+
+	public NoticeVO(int readcnt, int id, String title, String content, String writer, String filename, String filepath, String writedate) {
+		this.readcnt = readcnt;
+		this.id = id;
+		this.title = title;
+		this.content = content;
+		this.writer = writer;
+		this.filename = filename;
+		this.filepath = filepath;
+		this.writedate = writedate;
+	}
+
 	public int getReadcnt() {
 		return readcnt;
 	}
