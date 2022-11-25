@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         MemberVO vo = (MemberVO) intent.getSerializableExtra("vo");
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+        /*
         CommonAskTask askTask = new CommonAskTask("andLogin", this);
         askTask.addParam("id",new Gson().toJson(vo));
         askTask.addParam("pw", new Gson().toJson(vo));
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("비밀번호", "onResult: "+ data);
             }
         });
-
+*/
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
