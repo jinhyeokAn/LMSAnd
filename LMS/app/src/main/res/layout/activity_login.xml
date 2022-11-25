@@ -81,7 +81,7 @@
                         android:id="@+id/edtlogin"
                         android:text="로그인"
                         android:textStyle="bold"
-                        android:backgroundTint="#B22727"
+                        android:backgroundTint="#2D94E3"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
