@@ -46,15 +46,15 @@ EquipmentFragment fragment;
         h.eq_day.setText(list.get(i).getBuy_day()+"");
 
         final int index = i;
+        // 목록 컬러 변경
         if(index%2==0){
-            h.layout.setBackgroundColor(Color.parseColor("#EEEFF1"));
+            h.layout.setBackgroundColor(Color.parseColor("#e8eaeb"));
         }
         h.eqmodify_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //modi 수정화면으로 변경.
                 Intent intent = new Intent(h.eq_name.getContext(),EqModifyActivity.class);
-                intent.putExtra("isEnable",true);
                 intent.putExtra("vo",list.get(index));
                 h.eq_name.getContext().startActivity(intent);
             }
