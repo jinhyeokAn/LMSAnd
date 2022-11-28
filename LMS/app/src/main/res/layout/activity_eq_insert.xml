@@ -51,11 +51,10 @@
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:enabled="false"
                         android:textAlignment="center"
-                        android:id="@+id/modieqname"
+                        android:id="@+id/addeqname"
                         android:background="#FFFFFF"
-                        android:text="ㅇㅇㅇ"
+                        android:hint="비품이름"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -73,9 +72,9 @@
                         android:layout_height="wrap_content"/>
                     <EditText
                         android:textAlignment="center"
-                        android:id="@+id/modieqquantity"
+                        android:id="@+id/addeqquantity"
                         android:background="#FFFFFF"
-                        android:text="ㅇㅇㅇ"
+                        android:hint="비품수량"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -94,15 +93,15 @@
                     <EditText
                         android:paddingLeft="50dp"
                         android:textAlignment="center"
-                        android:id="@+id/modidate"
+                        android:id="@+id/adddate"
                         android:background="#FFFFFF"
-                        android:text="ㅇㅇㅇ"
+                        android:hint="구매일"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"/>
 
                     <Button
                         android:backgroundTint="#373F47"
-                        android:id="@+id/date"
+                        android:id="@+id/insert_date"
                         android:layout_width="25dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="5dp"
@@ -126,9 +125,9 @@
                         android:layout_height="wrap_content"/>
                     <EditText
                         android:textAlignment="center"
-                        android:id="@+id/modiinfo"
+                        android:id="@+id/addinfo"
                         android:background="#FFFFFF"
-                        android:text="ㅇㅇㅇ"
+                        android:hint="기타정보"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -146,9 +145,9 @@
                         android:layout_height="wrap_content"/>
                     <EditText
                         android:textAlignment="center"
-                        android:id="@+id/modiprice"
+                        android:id="@+id/addprice"
                         android:background="#FFFFFF"
-                        android:text="ㅇㅇㅇ"
+                        android:hint="가격"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -160,13 +159,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/eqmodify_btn"
+                android:id="@+id/eqeqinsert_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="90dp"
                 android:backgroundTint="#527DA6"
-                android:text="수정" />
+                android:text="추가" />
 
             <Button
                 android:id="@+id/eqback_btn"

@@ -89,14 +89,7 @@ public class EqModifyActivity extends AppCompatActivity {
                 try {
                     vo.setEquipment_num(Integer.parseInt(String.valueOf(modieqquantity.getText()))); //수량
                     vo.setPrice(Integer.parseInt(String.valueOf(modiprice.getText())));              //가격
-                    Log.d("로그", "onClick: 요청 date"+modidate.getText());
-                    Log.d("TAG", "onClick: " + datePickerDialog.getDatePicker().getYear());
-                    Log.d("TAG", "onClick: " + datePickerDialog.getDatePicker().getMonth());
-                    Log.d("TAG", "onClick: " + datePickerDialog.getDatePicker().getDayOfMonth());
 
-//                    Date date = new Date( Integer.parseInt("datePickerDialog.getDatePicker().getYear()"),
-//                            Integer.parseInt(" datePickerDialog.getDatePicker().getMonth()"),Integer.parseInt(" datePickerDialog.getDatePicker().getDayOfMonth()"));
-                    Log.d("로그", "onClick: "+datePickerDialog.getDatePicker().getYear() +"////변환값:date:"+date);
 
                 }catch (Exception e){
                     Toast.makeText(EqModifyActivity.this,"정수로 입력해주세요!",Toast.LENGTH_SHORT).show();

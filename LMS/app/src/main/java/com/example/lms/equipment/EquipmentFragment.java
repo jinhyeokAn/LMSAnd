@@ -1,5 +1,6 @@
 package com.example.lms.equipment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -30,9 +31,16 @@ public class EquipmentFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_equipment, container, false);
         eq_recv = v.findViewById(R.id.equipment_list);
         ArrayList<EquipmentVO> list;
-
+        eqinsert_btn = v.findViewById(R.id.eqinsert_btn);
         cus_select();
 
+        eqinsert_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),EqInsertActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
