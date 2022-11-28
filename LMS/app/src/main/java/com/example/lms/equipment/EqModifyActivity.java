@@ -3,6 +3,7 @@ package com.example.lms.equipment;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -61,6 +62,11 @@ public class EqModifyActivity extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 modidate.setText(year+"/" + (month+1) +"/" +dayOfMonth);
                 Log.d("로그", "onDateSet: Date"+modidate.getText());
+                Calendar c = Calendar.getInstance();
+                c.set(year , month , dayOfMonth);
+                vo.setBuy_day(new Date(c.getTimeInMillis()));      //구입날자
+                Log.d("TAG", "onDateSet: " + c.getTimeInMillis());
+
             }
         }, mYear, mMonth, mDay);
 
@@ -69,6 +75,7 @@ public class EqModifyActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (date.isClickable()) {
                     datePickerDialog.show();
+
                 }
             }
         });
@@ -83,11 +90,18 @@ public class EqModifyActivity extends AppCompatActivity {
                     vo.setEquipment_num(Integer.parseInt(String.valueOf(modieqquantity.getText()))); //수량
                     vo.setPrice(Integer.parseInt(String.valueOf(modiprice.getText())));              //가격
                     Log.d("로그", "onClick: 요청 date"+modidate.getText());
-                    Date date = new Date(datePickerDialog.getDatePicker().getYear() , datePickerDialog.getDatePicker().getMonth() , datePickerDialog.getDatePicker().getDayOfMonth());
-                    vo.setBuy_day(date);      //구입날자
+                    Log.d("TAG", "onClick: " + datePickerDialog.getDatePicker().getYear());
+                    Log.d("TAG", "onClick: " + datePickerDialog.getDatePicker().getMonth());
+                    Log.d("TAG", "onClick: " + datePickerDialog.getDatePicker().getDayOfMonth());
+
+//                    Date date = new Date( Integer.parseInt("datePickerDialog.getDatePicker().getYear()"),
+//                            Integer.parseInt(" datePickerDialog.getDatePicker().getMonth()"),Integer.parseInt(" datePickerDialog.getDatePicker().getDayOfMonth()"));
+                    Log.d("로그", "onClick: "+datePickerDialog.getDatePicker().getYear() +"////변환값:date:"+date);
+
                 }catch (Exception e){
-                    modieqquantity.setHint("정수로 입력해주세요!");
-                    modieqquantity.setHint("정수로 입력해주세요!");
+                    Toast.makeText(EqModifyActivity.this,"정수로 입력해주세요!",Toast.LENGTH_SHORT).show();
+                    modieqquantity.setText("정수로 입력해주세요!");
+                    modieqquantity.setText("정수로 입력해주세요!");
                 }
                 Log.d("로그", "onClick: "+vo);
                 CommonAskTask task = new CommonAskTask("andeqmodify",EqModifyActivity.this);
@@ -126,6 +140,8 @@ public class EqModifyActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
 
 
         //back
