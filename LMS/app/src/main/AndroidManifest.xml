@@ -55,6 +55,8 @@
             android:exported="true" />
         <activity
             android:name=".equipment.EqModifyActivity"
+            android:exported="true" />
+        <activity
             android:name=".notice.NoticeDetailActivity"
             android:exported="true" />
         <activity
@@ -75,9 +77,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity
-            android:name=".member.JoinActivity"
-            android:exported="true" />
+      
     </application>
 
 </manifest>
