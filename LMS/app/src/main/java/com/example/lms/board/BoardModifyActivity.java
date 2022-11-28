@@ -20,7 +20,9 @@ public class BoardModifyActivity extends AppCompatActivity {
         Intent intent = getIntent();
         BoardVO vo = (BoardVO) intent.getSerializableExtra("vo");
 
-
+        board_modify_title = findViewById(R.id.board_modify_title);
+        board_modify_writer = findViewById(R.id.board_modify_writer);
+        board_modify_writedate = findViewById(R.id.)
 
 
 

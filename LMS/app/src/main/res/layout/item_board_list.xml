@@ -61,15 +61,14 @@
                         android:orientation="horizontal">
 
 
-
-                    <TextView
-                        android:id="@+id/board_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:text="작성시간"
-                        android:textColor="#FF282828"
-                        android:textSize="12dp" />
+                        <TextView
+                            android:id="@+id/board_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="작성시간"
+                            android:textColor="#FF282828"
+                            android:textSize="12dp" />
 
                         <View
                             android:layout_width="1dp"
@@ -90,31 +89,25 @@
                     </LinearLayout>
 
 
-                        <TextView
-                            android:id="@+id/board_content"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="내용"
-                            android:maxLines="1"
-                            android:textColor="#FF282828"
-                            android:textSize="12dp" />
-
-
-
-
-
-
+                    <TextView
+                        android:id="@+id/board_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:maxLines="1"
+                        android:text="내용"
+                        android:textColor="#FF282828"
+                        android:textSize="12dp" />
 
 
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_weight="4"
+                    android:id="@+id/board_imgfile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_attachment_fill0_wght400_grad0_opsz48"
-                    android:id="@+id/board_imgfile"/>
+                    android:layout_weight="4"
+                    android:src="@drawable/ic_attachment_fill0_wght400_grad0_opsz48" />
 
             </LinearLayout>
 
