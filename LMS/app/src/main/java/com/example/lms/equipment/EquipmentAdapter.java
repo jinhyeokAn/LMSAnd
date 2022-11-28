@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.lms.CommonMethod;
 import com.example.lms.R;
 
 import java.lang.reflect.Array;
@@ -43,7 +44,7 @@ EquipmentFragment fragment;
         h.eq_name.setText(list.get(i).getEquipment());
         h.eq_quantity.setText(list.get(i).getEquipment_num()+"");
         h.eq_price.setText(list.get(i).getPrice()+"");
-        h.eq_day.setText(list.get(i).getBuy_day()+"");
+        h.eq_day.setText(CommonMethod.dateToString(list.get(i).getBuy_day()));
 
         final int index = i;
         // 목록 컬러 변경

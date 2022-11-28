@@ -15,6 +15,7 @@ import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.lms.TestTask;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
@@ -47,10 +48,11 @@ public class EquipmentFragment extends Fragment {
             @Override
             public void onResult(String data, boolean isResult) {
                 //통신 완료 시 데이터를 가지고 온다.
+                Gson gson = new GsonBuilder().setDateFormat("yyyy-mm-MM HH:mm:ss").create();
                 if(isResult){
-                    Log.d("로그", "onResult: "+data);
+                    Log.d("로그", "onResult: 스프링에서 데이터 가져옴");
                     ArrayList<EquipmentVO> list =
-                            new Gson().fromJson(data, new TypeToken<ArrayList<EquipmentVO>>(){}.getType());
+                            gson.fromJson(data, new TypeToken<ArrayList<EquipmentVO>>(){}.getType());
 
                    EquipmentAdapter adapter = new EquipmentAdapter(getLayoutInflater(),list,EquipmentFragment.this);
                     RecyclerView.LayoutManager manager = new LinearLayoutManager(
