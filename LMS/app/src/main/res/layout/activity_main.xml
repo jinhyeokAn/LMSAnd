@@ -22,6 +22,7 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <FrameLayout
+            android:layout_marginTop="?actionBarSize"
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -33,7 +34,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/team_main"
+            android:background="#2E99E1"
             app:layout_anchor="@+id/appBarLayout"
             app:layout_anchorGravity="center"
             app:popupTheme="@style/Widget.AppCompat.Toolbar" />

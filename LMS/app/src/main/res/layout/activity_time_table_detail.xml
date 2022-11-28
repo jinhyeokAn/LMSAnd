@@ -33,7 +33,6 @@
                 android:textColor="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
         </TableRow>
 
         <TableRow
@@ -244,6 +243,7 @@
         </TableRow>
 
     </TableLayout>
+
 
     <androidx.constraintlayout.utils.widget.MotionButton
         android:id="@+id/btn_ok"

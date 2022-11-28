@@ -1,15 +1,19 @@
 package com.example.lms.lecture;
 
-import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import android.widget.ImageView;
 
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
@@ -19,50 +23,48 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 
 
-public class LectureFragment extends Fragment {
-    RecyclerView recv_lecture;
-    Button lec_detail;
+public class LectureDetailFragment extends Fragment {
+    ImageView lec_detail;
+    RecyclerView lec_detail_recv;
+    CardView lec_detai;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_lecture, container, false);
+        View v = inflater.inflate(R.layout.fragment_lecture_detail, container, false);
 
-        recv_lecture = v.findViewById(R.id.recv_lecture);
-
-
+        lec_detai = v.findViewById(R.id.lec_detai);
+        lec_detail_recv = v.findViewById(R.id.lec_detail_recv);
+        lec_detail = v.findViewById(R.id.lec_detail);
+        lecture_detail();
         return v;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        lecture_list();
+        lecture_detail();
     }
 
-    public void lecture_list(){
-        CommonAskTask task = new CommonAskTask("andlist.lec", getContext());
+    public void lecture_detail(){
+        CommonAskTask task = new CommonAskTask("anddetail.lec", getContext());
         task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {
                 if(isResult){
                     ArrayList<LectureVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<LectureVO>>(){}.getType());
-                    LectureAdapter adapter = new LectureAdapter(getLayoutInflater(), list, getActivity());
+                    LectureDetailAdapter adapter = new LectureDetailAdapter(getLayoutInflater(), list, getActivity());
                     RecyclerView.LayoutManager manager = new LinearLayoutManager(
                             getContext(), RecyclerView.VERTICAL, false
                     );
 
 
-                    recv_lecture.setAdapter(adapter);
-                    recv_lecture.setLayoutManager(manager);
-                }else{
-
+                    lec_detail_recv.setAdapter(adapter);
+                    lec_detail_recv.setLayoutManager(manager);
+                }else {
+                    Log.d("TAG", "onResult: 안됨");
                 }
             }
         });
     }
-
-
-
-
 }
