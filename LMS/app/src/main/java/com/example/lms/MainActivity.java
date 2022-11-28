@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 
+import com.example.lms.board.BoardFragment;
 import com.example.lms.lecture.LectureFragment;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.member.MemberVO;
@@ -182,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
         sub_list4.add(new SideVO("공지사항", new NoticeFragment()));
         sub_list4.add(new SideVO("학습자료", new LectureFragment()));
         sub_list4.add(new SideVO("수강후기", new LectureFragment()));
+        sub_list4.add(new SideVO("자유게시판", new BoardFragment()));
         main_list.add(new SideVO("게시판","(공지사항 , 학습 자료 게시판... )" , "#661234"  , sub_list4 ));
         main_list.get(3).setImageId(R.drawable.menuimage4);
 
@@ -213,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
         sub_list4.add(new SideVO("공지사항", new NoticeFragment()));
         sub_list4.add(new SideVO("학습자료", new LectureFragment()));
         sub_list4.add(new SideVO("수강후기", new LectureFragment()));
-
+        sub_list4.add(new SideVO("자유게시판", new BoardFragment()));
         main_list.add(new SideVO("게시판","(공지사항 , 학습 자료 게시판... )" , "#661234"  , sub_list4 ));
         main_list.get(3).setImageId(R.drawable.menuimage4);
 
