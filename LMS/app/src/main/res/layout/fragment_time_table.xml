@@ -94,7 +94,7 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon1"
-                android:text="마이크로프로세서1\n(103호)"
+                android:text="강의이름\n(강의실)"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -103,7 +103,7 @@
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
-                android:text="자료구조\n(202호)"
+                android:text=""
                 android:id="@+id/tue1"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
@@ -124,7 +124,7 @@
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/thu1"
-                android:text="여기에 텍스트"
+                android:text=""
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -134,7 +134,7 @@
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/fri1"
-                android:text="여기에 텍스트"
+                android:text=""
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
