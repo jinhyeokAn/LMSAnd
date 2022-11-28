@@ -22,7 +22,7 @@ public class BoardModifyActivity extends AppCompatActivity {
 
         board_modify_title = findViewById(R.id.board_modify_title);
         board_modify_writer = findViewById(R.id.board_modify_writer);
-        //board_modify_writedate = findViewById(R.id.)
+        //board_modify_writedate = findViewById(R.id.);
 
 
 
