@@ -51,6 +51,12 @@
         android:theme="@style/Theme.LMS"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".board.BoardModifyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".board.BoardDetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".notice.NoticeDetailActivity"
             android:exported="true" />
         <activity
@@ -70,9 +76,6 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".member.JoinActivity"
             android:exported="true" />
     </application>
 

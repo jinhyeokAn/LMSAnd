@@ -15,17 +15,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="공지사항"
+            android:text="자유게시판"
             android:textSize="30dp"
             android:id="@+id/notice_detail_txt"
             />
 
         <TableLayout
             android:layout_below="@+id/notice_detail_txt"
-            android:id="@+id/notice_table"
+            android:id="@+id/board_table"
             android:stretchColumns="0,2,3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="600dp">
             <TableRow
                 android:layout_height="0dp"
                 android:layout_width="match_parent">
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="제목"
                     android:padding="10dp"
-                    android:id="@+id/notice_detail_title"
+                    android:id="@+id/board_detail_title"
                     />
 
             </TableRow>
@@ -58,7 +58,7 @@
                     android:text="작성자"/>
 
                 <TextView
-                    android:id="@+id/notice_detail_writer"
+                    android:id="@+id/board_detail_writer"
                     android:layout_width="20dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -72,13 +72,13 @@
                     android:gravity="center"
                     android:background="@color/lmsmainbl"
                     android:text="조회수"/>
-
                 <TextView
-                    android:id="@+id/notice_detail_readcnt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="조회수"
+                    android:id="@+id/board_detail_readcnt"
                     android:padding="10dp"
-                    android:text="조회수" />
+                    />
             </TableRow>
             <TableRow
                 android:layout_height="0dp"
@@ -94,7 +94,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/notice_detail_writedate"
+                    android:id="@+id/board_detail_writedate"
                     android:text="작성일자"
                     android:padding="10dp"
 
@@ -121,7 +121,7 @@
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:gravity="left"
-                    android:id="@+id/notice_detail_content"
+                    android:id="@+id/board_detail_content"
                     android:text="내용"/>
 
 
@@ -141,14 +141,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:id="@+id/notice_detail_filename"/>
+                    android:id="@+id/board_detail_filename"/>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:src="@drawable/ic_attachment_fill0_wght400_grad0_opsz48"
-                    android:id="@+id/notice_detail_filepath"
+                    android:id="@+id/board_detail_filepath"
                     android:layout_gravity="center"
 
                     />
@@ -156,28 +156,43 @@
 
             </TableRow>
 
-            <TableRow
-                android:layout_height="0dp"
-                android:layout_width="match_parent">
-                <Button
-                    android:id="@+id/notice_list"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="목록"/>
-                <Button
-                    android:id="@+id/notice_modify"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수정"/>
-                <Button
-                    android:id="@+id/notice_delete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="삭제"/>
-
-            </TableRow>
-
         </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/board_table"
+            android:gravity="center"
+            >
+
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/board_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="목록"/>
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/board_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수정"/>
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/board_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="삭제"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+
 
 
     </RelativeLayout>
