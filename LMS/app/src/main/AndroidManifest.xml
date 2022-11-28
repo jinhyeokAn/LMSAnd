@@ -55,6 +55,7 @@
             android:exported="true" />
         <activity
             android:name=".equipment.EqModifyActivity"
+            android:name=".notice.NoticeDetailActivity"
             android:exported="true" />
         <activity
             android:name=".timetable.TimeTableDetailActivity"
