@@ -36,11 +36,11 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        holder.lecture_num.setText(table_vo.get(position).getLecture_num());
+        holder.lecture_num.setText(table_vo.get(position).getLecture_num()+"");
         holder.lecture_title.setText(table_vo.get(position).getLecture_title());
         holder.lecture_room.setText(table_vo.get(position).getLecture_room());
         holder.teacher_name.setText(table_vo.get(position).getTeacher_name());
-        holder.lecture_time.setText(table_vo.get(position).getLecture_day() + "(" + table_vo.get(position).getLecture_time() + "교시)");
+        holder.lecture_time.setText(table_vo.get(position).getLecture_day() + "요일 (" + table_vo.get(position).getLecture_time() + "교시)");
 
         final int index = position;
         holder.btn_detail.setOnClickListener(new View.OnClickListener() {
@@ -56,8 +56,14 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
             @Override
             public void onClick(View v) {
                 EnrolmentVO enrol_vo = new EnrolmentVO();
-                CommonAskTask task = new CommonAskTask("regist.at", holder.btn_regist.getContext());
-                task.addParam("lecture_num", table_vo.get(position).getLecture_num());
+                CommonAskTask task = new CommonAskTask("delete.at", holder.btn_regist.getContext());
+                task.addParam("lecture_num", enrol_vo.getLecture_num());
+                task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
+                    @Override
+                    public void onResult(String data, boolean isResult) {
+                        registListFragment.list_select();
+                    }
+                });
             }
         });
 

@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 import com.example.lms.lecture.LectureFragment;
 import com.example.lms.lms.CommonAskTask;
@@ -71,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
 
         nav_view = findViewById(R.id.nav_view);
         View headerView = nav_view.getHeaderView(0);
+        TextView tv1 = headerView.findViewById(R.id.loginID);
+        TextView tv2 = headerView.findViewById(R.id.loginno);
+        tv1.setText(vo.getName() + "님");
+        tv2.setText(vo.getId());
         headerView.findViewById(R.id.imgv_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -199,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> sub_list2 = new ArrayList<>();
         sub_list2.add(new SideVO("내 강의목록", new LectureFragment()));
         sub_list2.add(new SideVO("내 시간표", new TimeTableFragment()));
+        sub_list2.add(new SideVO("수강신청", new RegistListFragment()));
         main_list.add(new SideVO("강의 관리","(강의 목록 , 시간표 ... )" , "#654321"  , sub_list2 ));
         main_list.get(1).setImageId(R.drawable.menuimage2);
 
