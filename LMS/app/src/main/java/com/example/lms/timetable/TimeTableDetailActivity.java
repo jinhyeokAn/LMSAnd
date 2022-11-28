@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.lms.R;
 
+// 시간표 정보 상세보기 popup
 public class TimeTableDetailActivity extends AppCompatActivity {
     Button btn_ok;
 
