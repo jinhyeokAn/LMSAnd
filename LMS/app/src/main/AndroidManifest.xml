@@ -51,18 +51,6 @@
         android:theme="@style/Theme.LMS"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".myinfo.MyinfoActivity"
-            android:exported="true" />
-        <activity
-            android:name=".equipment.EqInsertActivity"
-            android:exported="true" />
-        <activity
-            android:name=".equipment.EqModifyActivity"
-            android:exported="true" />
-        <activity
-            android:name=".notice.NoticeDetailActivity"
-            android:exported="true" />
-        <activity
             android:name=".timetable.TimeTableDetailActivity"
             android:exported="true" />
         <activity
@@ -76,10 +64,13 @@
         </activity>
         <activity
             android:name=".member.LoginActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
+        <activity
+            android:name=".member.JoinActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

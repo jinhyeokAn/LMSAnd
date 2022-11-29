@@ -64,6 +64,4 @@ dependencies {
 
     implementation 'com.synnapps:carouselview:0.1.5'
 
-
-
 }

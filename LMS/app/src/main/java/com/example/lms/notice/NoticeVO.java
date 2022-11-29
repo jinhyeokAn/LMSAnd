@@ -6,7 +6,6 @@ public class NoticeVO implements Serializable {
 	private int  readcnt, id;
 	private String title, content, writer,filename,	filepath;
 	private String writedate;
-
 	public int getReadcnt() {
 		return readcnt;
 	}

@@ -62,7 +62,6 @@
         android:textColor="#000"
         android:text="정은진님"/>
     <TextView
-        android:id="@+id/loginno"
         android:layout_below="@id/loginID"
         android:textSize="15dp"
         android:layout_alignLeft="@id/loginID"
@@ -76,7 +75,8 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#26000000" />
+            android:background="#26000000"
+            />
         <de.hdodenhof.circleimageview.CircleImageView
 
 
